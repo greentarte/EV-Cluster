@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_focus"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:orientation="horizontal" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/login_pwd"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/login_pwd"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+
+    <Button
+        android:id="@+id/login_loginBt"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignStart="@+id/login_email"
+        android:layout_below="@+id/login_pwd"
+        android:onClick="clickLogIn"
+        android:text="Log in"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/login_signupBt"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignEnd="@+id/login_email"
+        android:layout_alignTop="@+id/login_loginBt"
+        android:onClick="clickSignUp"
+        android:text="Sign up"
+        android:textAllCaps="false" />
+
+    <CheckBox
+        android:id="@+id/login_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_loginBt"
+        android:layout_centerHorizontal="true"
+        android:text="Remember login"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>
